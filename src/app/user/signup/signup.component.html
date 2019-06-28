@@ -1,0 +1,14 @@
+<div class="side-image">
+    <p>LUXLIVES</p>
+    <img class="background" src="../../../assets/rave_background.jpg" alt="">
+</div>
+
+<div class="content-row">
+    <span>Crie sua conta grátis</span>
+    <form #form="ngForm" [formGroup]="signupForm" (submit)=submit()>
+        <input title="Nome" placeholder="Nome" formControlName="name">
+        <input title="E-mail" placeholder="E-mail" formControlName="email">
+        <input title="Senha" placeholder="Senha" formControlName="password">
+        <input title="Confirme sua senha" placeholder="Confirme sua senha" formControlName="password">
+    </form>
+</div>
