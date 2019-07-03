@@ -1,14 +1,22 @@
 <div class="side-image">
-    <p>LUXLIVES</p>
-    <img class="background" src="../../../assets/rave_background.jpg" alt="">
+  <p>LUXLIVES</p>
+  <img class="background" src="../../../assets/rave_background.jpg" alt="">
 </div>
 
 <div class="content-row">
-    <span>Crie sua conta grátis</span>
-    <form #form="ngForm" [formGroup]="signupForm" (submit)=submit()>
-        <input title="Nome" placeholder="Nome" formControlName="name">
-        <input title="E-mail" placeholder="E-mail" formControlName="email">
-        <input title="Senha" placeholder="Senha" formControlName="password">
-        <input title="Confirme sua senha" placeholder="Confirme sua senha" formControlName="password">
-    </form>
+  <span>Crie sua conta grátis</span>
+  <form #form="ngForm" [formGroup]="signupForm" (submit)=submit()>
+    <input title="Nome" placeholder="Nome" formControlName="username" class="form-field input">
+    <input type="e-mail" title="E-mail" placeholder="E-mail" formControlName="email" class="form-field input">
+    <input type="password" title="Senha" placeholder="Senha" formControlName="password" class="form-field input">
+    <input type="password" id="confirmacao-senha" title="Confirme sua senha" placeholder="Confirme sua senha" class="form-field input">
+    <input type="date" title="Data de nascimento" placeholder="Data de nascimento" formControlName="birthday" class="form-field input">
+    <select title="Gênero" formControlName="gender" name="select" class="input form-select">
+      <option disabled selected>Selecione seu gênero</option> 
+      <option value="masc">Masculino</option> 
+      <option value="femn">Feminino</option>
+      <option value="outr">Outro</option>
+    </select>
+    <button class="form-button">Cadastre-se</button>
+  </form>
 </div>
