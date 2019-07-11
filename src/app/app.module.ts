@@ -3,22 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './user/signup/signup.component';
-import { LoginComponent } from './user/login/login.component';
+import { SignupComponent } from './user-module/signup-component/signup.component';
+import { LoginComponent } from './user-module/login-component/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
+import { RouterModule } from '@angular/router';
+import { StreamerSignupComponent } from './user-module/streamer-signup-component/streamer-signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    StreamerSignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    RouterModule,
     HttpClientModule
   ],
   providers: [],

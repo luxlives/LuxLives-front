@@ -63,4 +63,8 @@ export class BaseService<T> {
   protected getUrl(): string {
     return `${this.baseUrl}${this.controllerUrl}`;
   }
+
+  dateParse(date) {
+    return Date.parse(date) + 7200000
+  }
 }

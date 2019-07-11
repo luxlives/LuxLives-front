@@ -6,17 +6,19 @@
 <div class="content-row">
   <span>Crie sua conta grátis</span>
   <form #form="ngForm" [formGroup]="signupForm" (submit)=submit()>
-    <input title="Nome" placeholder="Nome" formControlName="username" class="form-field input">
+    <input title="Nome" placeholder="Nome" formControlName="nome" class="form-field input name-field">
+    <input title="Login" placeholder="Nome de usuário" formControlName="login" class="form-field input">
     <input type="e-mail" title="E-mail" placeholder="E-mail" formControlName="email" class="form-field input">
     <input type="password" title="Senha" placeholder="Senha" formControlName="password" class="form-field input">
     <input type="password" id="confirmacao-senha" title="Confirme sua senha" placeholder="Confirme sua senha" class="form-field input">
-    <input type="date" title="Data de nascimento" placeholder="Data de nascimento" formControlName="birthday" class="form-field input">
-    <select title="Gênero" formControlName="gender" name="select" class="input form-select">
+    <input type="date" title="Data de nascimento" placeholder="Data de nascimento" formControlName="dataNasc" class="form-field input">
+    <select title="Gênero" formControlName="genero" name="select" class="input form-select">
       <option disabled selected>Selecione seu gênero</option> 
-      <option value="masc">Masculino</option> 
+      <option value="masc">Masculino</option>
       <option value="femn">Feminino</option>
       <option value="outr">Outro</option>
     </select>
     <button class="form-button">Cadastre-se</button>
   </form>
+  <p class="already-account">Já tem uma conta? <br> <a [routerLink]="['/login']">Faça login</a></p>
 </div>

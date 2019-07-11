@@ -1,0 +1,14 @@
+<div class="side-image">
+    <p>LUXLIVES</p>
+    <img class="background" src="../../../assets/rave_background.jpg" alt="">
+  </div>
+  
+  <div class="content-row">
+    <span>Faça login para continuar</span>
+    <form #form="ngForm" [formGroup]="loginForm" (submit)=submit()>
+      <input type="e-mail" title="E-mail" placeholder="E-mail" formControlName="email" class="form-field input email-field">
+      <input type="password" title="Senha" placeholder="Senha" formControlName="senha" class="form-field input">
+      <button class="form-button">Entrar</button>
+    </form>
+    <p class="no-account">Não tem uma conta? <br> <a [routerLink]="['/signup']">Cadastre-se</a></p>
+  </div>
