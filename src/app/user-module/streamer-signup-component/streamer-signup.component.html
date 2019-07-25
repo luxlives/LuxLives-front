@@ -1,1 +1,27 @@
-<p>streamer-signup works!</p>
+<div class='top'>
+</div>
+<div class='main'>
+  <span>Faça o cadastro completo para cotinuar</span>
+  <form #form="ngForm" [formGroup]="signupForm" (submit)=submit()>
+    <input title="Nome" placeholder="Nome" formControlName="nome" class="form-field input name-field">
+    <input title="Login" placeholder="Nome de usuário" formControlName="login" class="form-field input">
+    <input type="e-mail" title="E-mail" placeholder="E-mail" formControlName="email" class="form-field input">
+    <input type="date" title="Data de nascimento" placeholder="Data de nascimento" formControlName="dataNasc" class="form-field input">
+    <select title="Gênero" formControlName="genero" name="select" class="input form-select">
+      <option disabled selected>Selecione seu gênero</option>
+      <option value="masc">Masculino</option>
+      <option value="femn">Feminino</option>
+      <option value="outr">Outro</option>
+    </select>
+    <select title="Gênero" formControlName="genero" name="select" class="input form-select">
+        <option disabled selected>Selecione seu tipo de público</option>
+        <option value="masc">Hétero</option>
+        <option value="femn">Gay</option>
+        <option value="outr">Outro</option>
+      </select>
+    <br>
+    <button class="form-button">Próximo</button>
+  </form>
+</div>
+<div class='bottom'>
+</div>

@@ -1,10 +1,11 @@
+
+import { InvokeErrorService } from 'src/app/shared-module/errors-service/invoke-error.service';
 import { Component, OnInit } from '@angular/core';
 import { BaseService } from 'src/app/base.service';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Signup } from './signup';
 import * as $ from 'jquery'
-import { InvokeErrorService } from 'src/app/shared/errors-service/invoke-error.service';
 
 @Component({
   selector: 'app-signup',

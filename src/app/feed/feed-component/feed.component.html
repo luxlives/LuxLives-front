@@ -1,1 +1,27 @@
-<p>feed works!</p>
+<app-top-sidebar></app-top-sidebar>
+<div class="hot-content-container">
+
+</div>
+<div class="lives-container">
+  <h3 class="recommendations">Recomendações</h3>
+  <span *ngFor="let data of livestream"  class="live-card">
+    <!--img src="../../../assets/thumbnail.JPG"-->
+    <span>
+      <div class="card-top">
+          <img src="../../../assets/thumbnail.JPG">
+      </div>
+      <div class="card-body">
+        <table>
+          <td>
+            <i class="material-icons icon-user">
+              account_circle
+            </i>
+          </td>
+          <td class="card-title">
+              {{data.titulo}}
+          </td>
+        </table>
+      </div>
+    </span>
+  </span>
+</div>

@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 import { RouterModule } from '@angular/router';
 import { StreamerSignupComponent } from './user-module/streamer-signup-component/streamer-signup.component';
+import { FeedModule } from './feed/feed.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StreamerSignupComponent } from './user-module/streamer-signup-component
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FeedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
